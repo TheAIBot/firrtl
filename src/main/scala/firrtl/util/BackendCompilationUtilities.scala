@@ -136,7 +136,7 @@ trait BackendCompilationUtilities {
         "-Wno-WIDTH",
         "-Wno-STMTDLY"
       ) ++
-      { if(suppressVcd) { Seq.empty } else { Seq("--trace")} } ++
+      { if(suppressVcd) { Seq.empty } else { Seq("--trace", "--trace-underscore")} } ++
       Seq(
         "-O1",
         "--top-module", topModule,
